@@ -1,0 +1,36 @@
+image: Visual Studio 2017
+shallow_clone: true
+
+install:
+  - "set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - python --version
+  - pip install lxml
+  - pip install pypiwin32
+  - choco install dmd
+  - choco install ldc
+  - choco install swig
+  - choco install vswhere
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python27"
+      BUILD_JOB_NUM: 1
+
+    - PYTHON: "C:\\Python35"
+      BUILD_JOB_NUM: 1
+
+    - PYTHON: "C:\\Python36"
+      BUILD_JOB_NUM: 1
+
+    - PYTHON: "C:\\Python27-x64"
+      BUILD_JOB_NUM: 1
+
+    - PYTHON: "C:\\Python35-x64"
+      BUILD_JOB_NUM: 1
+      
+    - PYTHON: "C:\\Python36-x64"
+      BUILD_JOB_NUM: 1
+
+build: off
+build_script:
+  - cmd: python enumerate_environment.py 
