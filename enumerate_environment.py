@@ -1,14 +1,18 @@
+"""
+Figure out paths in appveyor environment
+"""
 from __future__ import print_function
 import os
 
 def check_dir(path):
+    """ enumerate files/directories under path"""
     print(r'-- Directories under %s'%path)
-    for p in os.listdir(path):
-        print("Path->%s"%p)
+    for item in os.listdir(path):
+        print("Path->%s"%os.path.join(path, item))
 
 
-pathdirs = os.environ['PATH'].split(os.pathsep)
-for p in pathdirs:
+PATHDIRS = os.environ['PATH'].split(os.pathsep)
+for p in PATHDIRS:
     print("Path->%s"%p)
 
 check_dir('c:\\')
