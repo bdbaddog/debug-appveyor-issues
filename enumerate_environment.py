@@ -18,3 +18,9 @@ for p in PATHDIRS:
 check_dir('c:\\')
 check_dir('C:/Program Files (x86)/')
 check_dir('C:/Program Files/')
+
+check_dir('C:/Program Files/LLVM/bin')
+
+check_dir('C:/msys64')
+
+check_dir('C:/ProgramData/chocolatey/bin')
