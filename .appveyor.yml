@@ -24,14 +24,14 @@ environment:
     - PYTHON: "C:\\Python36"
       BUILD_JOB_NUM: 1
 
-    - PYTHON: "C:\\Python27-x64"
-      BUILD_JOB_NUM: 1
+    # - PYTHON: "C:\\Python27-x64"
+    #   BUILD_JOB_NUM: 1
 
-    - PYTHON: "C:\\Python35-x64"
-      BUILD_JOB_NUM: 1
+    # - PYTHON: "C:\\Python35-x64"
+    #   BUILD_JOB_NUM: 1
       
-    - PYTHON: "C:\\Python36-x64"
-      BUILD_JOB_NUM: 1
+    # - PYTHON: "C:\\Python36-x64"
+    #   BUILD_JOB_NUM: 1
 
 build: off
 build_script:
