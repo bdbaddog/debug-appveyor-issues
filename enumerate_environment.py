@@ -32,4 +32,4 @@ check_dir('C:/msys64')
 check_dir('C:/ProgramData/chocolatey/bin')
 
 check_dir('C:/Program Files/Git/usr/bin')
-# find_file('xsltproc.exe')
+find_file('m4.exe')
