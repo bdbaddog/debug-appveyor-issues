@@ -1,4 +1,4 @@
-env=Environment(['msvc', 'mslink', 'jar', 'javac', 'javah', 'swig'])
+env=Environment(tools=['msvc', 'mslink', 'jar', 'javac', 'javah', 'swig'])
 
 import os
 for k in os.environ:
