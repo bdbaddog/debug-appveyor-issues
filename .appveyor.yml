@@ -12,6 +12,8 @@ install:
   - "set PATH=%PYTHON%;%PYTHON%\\Scripts;C:\\cygwin64\\bin;C:\\msys64;%PATH%"
   - python --version
   - pip install pypiwin32
+  - pip install wheel
+  - pip install --index-url https://test.pypi.org/simple/ scons==3.1.0.alpha.20181015
   - set STATIC_DEPS=true & pip install lxml
   - choco install --allow-empty-checksums dmd
   - choco install --allow-empty-checksums ldc
@@ -44,4 +46,5 @@ environment:
 
 build: off
 build_script:
-  - cmd: python enumerate_environment.py 
+  - cmd: python enumerate_environment.py
+  - cmd: scons
