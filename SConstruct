@@ -6,4 +6,6 @@ for k in os.environ:
 
 print("SCONS PATH:%s"%env['ENV']['PATH'])
 
-print("SHLINK: %s"%env['SHLINK'])
+print("SHLINK: %s"%env.subst('$SHLINK'))
+
+print("LINK:%s"%env.WhereIs('link.exe'))

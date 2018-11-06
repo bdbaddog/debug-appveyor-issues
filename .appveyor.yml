@@ -47,6 +47,6 @@ environment:
 
 build: off
 build_script:
-  - cmd: python enumerate_environment.py
+  # - cmd: python enumerate_environment.py
   - cmd: scons
 
