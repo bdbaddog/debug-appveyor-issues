@@ -52,5 +52,6 @@ before_build:
 
 build_script:
   - cmd: python enumerate_environment.py
+  - cmd: git --version
   # - cmd: scons
 
