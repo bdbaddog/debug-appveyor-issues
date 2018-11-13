@@ -46,7 +46,11 @@ environment:
     #   BUILD_JOB_NUM: 1
 
 build: off
+
+before_build:
+    - ps: Remove-Item  "C:\Program Files\Git\usr\bin\xsltproc.EXE" -ErrorAction Ignore
+
 build_script:
-  # - cmd: python enumerate_environment.py
-  - cmd: scons
+  - cmd: python enumerate_environment.py
+  # - cmd: scons
 
