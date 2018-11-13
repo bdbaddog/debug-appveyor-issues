@@ -2,9 +2,6 @@ image: Visual Studio 2017
 shallow_clone: true
 
 
-environment:
-  APPVEYOR_RDP_PASSWORD: billybob
-
 on_finish:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
@@ -35,6 +32,8 @@ environment:
   matrix:
     - PYTHON: "C:\\Python27"
       BUILD_JOB_NUM: 1
+      APPVEYOR_RDP_PASSWORD: billybob
+
 
     # - PYTHON: "C:\\Python35"
     #   BUILD_JOB_NUM: 1
