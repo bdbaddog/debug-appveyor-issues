@@ -53,5 +53,6 @@ before_build:
 build_script:
   - cmd: python enumerate_environment.py
   - cmd: git --version
+  - cmd: type C:\ProgramData\chocolatey\logs\chocolatey.log
   # - cmd: scons
 
