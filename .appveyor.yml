@@ -24,8 +24,6 @@ install:
   - choco install --allow-empty-checksums swig
   - choco install --allow-empty-checksums vswhere
   - choco install --allow-empty-checksums xsltproc
-  - choco uninstall git.install git
-  - choco install  --allow-empty-checksums  git.install
 
 
 
@@ -59,6 +57,8 @@ before_build:
         if (Test-Path "C:\Program Files\Git\usr\bin\xsltproc.EXE" ) {
           Remove-Item  "C:\Program Files\Git\usr\bin\xsltproc.EXE" -ErrorAction Ignore
         }
+    - ps: dir "C:\Program Files\Git\usr\bin\x*.exe"
+
 
 build_script:
   - cmd: python enumerate_environment.py
