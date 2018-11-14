@@ -7,9 +7,9 @@ on_finish:
 
 cache:
   - downloads -> appveyor.yml
-  # - '%LOCALAPPDATA%\pip\Cache'
-  # - C:\ProgramData\chocolatey\bin -> appveyor.yml
-  # - C:\ProgramData\chocolatey\lib -> appveyor.yml
+  - '%LOCALAPPDATA%\pip\Cache'
+  - C:\ProgramData\chocolatey\bin -> appveyor.yml
+  - C:\ProgramData\chocolatey\lib -> appveyor.yml
 
 install:
   - "set PATH=%PYTHON%;%PYTHON%\\Scripts;C:\\cygwin64\\bin;C:\\msys64;%PATH%"
@@ -32,7 +32,7 @@ environment:
   matrix:
     - PYTHON: "C:\\Python27"
       BUILD_JOB_NUM: 1
-      APPVEYOR_RDP_PASSWORD: 81llyB0B##
+      # APPVEYOR_RDP_PASSWORD: 81llyB0B##
 
 
     # - PYTHON: "C:\\Python35"
