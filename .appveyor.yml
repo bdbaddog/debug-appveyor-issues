@@ -2,8 +2,8 @@ image: Visual Studio 2017
 shallow_clone: true
 
 
-on_finish:
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+# on_finish:
+#   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 cache:
   - downloads -> appveyor.yml
@@ -53,7 +53,11 @@ environment:
 build: off
 
 before_build:
-    - ps: Remove-Item  "C:\Program Files\Git\usr\bin\xsltproc.EXE" -ErrorAction Ignore
+    - ps: dir "C:\Program Files\Git\usr\bin\x*.exe"
+    - ps: |
+        if (Test-Path "C:\Program Files\Git\usr\bin\xsltproc.EXE" ) {
+          Remove-Item  "C:\Program Files\Git\usr\bin\xsltproc.EXE" -ErrorAction Ignore
+        }
 
 build_script:
   - cmd: python enumerate_environment.py
