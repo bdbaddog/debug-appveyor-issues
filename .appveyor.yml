@@ -24,7 +24,8 @@ install:
   - choco install --allow-empty-checksums swig
   - choco install --allow-empty-checksums vswhere
   - choco install --allow-empty-checksums xsltproc
-  - choco install --force --allow-empty-checksums --upgrade git.install
+  - choco uninstall git.install git
+  - choco install  --allow-empty-checksums  git.install
 
 
 
