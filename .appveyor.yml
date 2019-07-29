@@ -17,7 +17,7 @@ install:
   - python -m pip install -U pip
   - pip install wheel
   - pip install pypiwin32
-  - pip install --index-url https://test.pypi.org/simple/ scons==3.1.0.alpha.20181015
+  - pip install --index-url https://test.pypi.org/simple/ scons==3.1.0
   - set STATIC_DEPS=true & pip install lxml
   - choco install --allow-empty-checksums dmd
   - choco install --allow-empty-checksums ldc
