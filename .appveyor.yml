@@ -30,8 +30,14 @@ install:
 
 environment:
   matrix:
-    - PYTHON: "C:\\Python27"
+    - WINPYTHON: "Python27"
+      PYTHON: "2.7"
+      PYVER: 27
       BUILD_JOB_NUM: 1
+      COVERAGE: 1
+
+    # - PYTHON: "C:\\Python27"
+    #   BUILD_JOB_NUM: 1
       # APPVEYOR_RDP_PASSWORD: 81llyB0B##
 
 
