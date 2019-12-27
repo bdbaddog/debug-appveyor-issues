@@ -30,9 +30,16 @@ install:
 
 environment:
   matrix:
-    - WINPYTHON: "Python37"
-      PYTHON: "3.7"
-      PYVER: 37
+    # - WINPYTHON: "Python37"
+    #   PYTHON: "3.7"
+    #   PYVER: 37
+    #   BUILD_JOB_NUM: 1
+    #   COVERAGE: 1
+    #   APPVEYOR_RDP_PASSWORD: 81llyB0B##
+
+    - WINPYTHON: "Python27"
+      PYTHON: "2.7"
+      PYVER: 27
       BUILD_JOB_NUM: 1
       COVERAGE: 1
       APPVEYOR_RDP_PASSWORD: 81llyB0B##
