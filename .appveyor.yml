@@ -37,9 +37,9 @@ environment:
     #   COVERAGE: 1
     #   APPVEYOR_RDP_PASSWORD: 81llyB0B##
 
-    - WINPYTHON: "Python27"
-      PYTHON: "2.7"
-      PYVER: 27
+    - WINPYTHON: "Python35"
+      PYTHON: "3.5"
+      PYVER: 35
       BUILD_JOB_NUM: 1
       COVERAGE: 1
       APPVEYOR_RDP_PASSWORD: 81llyB0B##
