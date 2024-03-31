@@ -1,4 +1,4 @@
-image: Visual Studio 2015
+image: Visual Studio 2017
 shallow_clone: true
 
 
@@ -24,6 +24,7 @@ install:
   # install 3rd party tools to test with
   - cmd: choco install --allow-empty-checksums dmd ldc swig vswhere xsltproc winflexbison
   - cmd: set SCONS_CACHE_MSVC_CONFIG=true
+  - cmd: "C:\\%WINPYTHON%\\python.exe -m pip install -U --progress-bar off scons"
   - cmd: set
 
 
@@ -37,9 +38,9 @@ environment:
     #   COVERAGE: 1
     #   APPVEYOR_RDP_PASSWORD: 81llyB0B##
 
-    - WINPYTHON: "Python35"
-      PYTHON: "3.5"
-      PYVER: 35
+    - WINPYTHON: "Python311"
+      PYTHON: "3.1"
+      PYVER: 311
       BUILD_JOB_NUM: 1
       COVERAGE: 1
       APPVEYOR_RDP_PASSWORD: 81llyB0B##
@@ -76,7 +77,7 @@ before_build:
 
 
 build_script:
-  - cmd: python enumerate_environment.py
-  - cmd: git --version
-  # - cmd: scons
+  # - cmd: python enumerate_environment.py
+  # - cmd: git --version
+  - cmd: scons
 
